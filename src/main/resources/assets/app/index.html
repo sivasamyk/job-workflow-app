@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="JobsWorkflowApp">
+<head>
+    <title>Iyer & Rao Charted Accountants - Job Workflow</title>
+    <link rel="stylesheet" type="text/css" href="/app/libs/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/app/libs/bootstrap/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/app/css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="/app/libs/ui-grid/ui-grid.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Iyer & Rao Charted Accountants - Job Workflow</a>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row main-nav">
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Jobs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Clients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Reports</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row content">
+        <div ng-controller="JobsController">
+            <div id="gird" ui-grid="gridOptions" ui-grid-auto-resize class="grid"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/app/libs/angular/angular.min.js"></script>
+<script src="/app/libs/ui-grid/ui-grid.min.js"></script>
+<script src="/app/app.js"></script>
+</html>
