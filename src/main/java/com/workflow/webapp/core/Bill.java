@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Created by skaliappan on 1/9/17.
  */
+@Entity
 public class Bill {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Created by skaliappan on 1/9/17.
  */
+@Entity
 public class User implements Principal {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -15,7 +16,7 @@ public class User implements Principal {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
 
     @OneToMany(mappedBy = "user")

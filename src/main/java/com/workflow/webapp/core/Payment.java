@@ -6,6 +6,7 @@ import java.sql.Date;
 /**
  * Created by skaliappan on 1/9/17.
  */
+@Entity
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -18,7 +19,7 @@ public class Payment {
     private Date date;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "forBill", referencedColumnName = "id", nullable = false)
     private Bill forBill;
 
 }

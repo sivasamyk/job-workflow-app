@@ -36,11 +36,11 @@ public class Job {
     private JobType jobType;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "client", referencedColumnName = "id", nullable = false)
     private Client client;
 
     @ManyToOne
-    @JoinColumn(name = "id", nullable = false)
+    @JoinColumn(name = "user", referencedColumnName = "id", nullable = false)
     private User user;
 
     @Column(name = "assignDate", nullable = false)

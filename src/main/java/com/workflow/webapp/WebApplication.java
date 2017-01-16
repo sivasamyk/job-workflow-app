@@ -1,6 +1,6 @@
 package com.workflow.webapp;
 
-import com.workflow.webapp.core.Job;
+import com.workflow.webapp.core.*;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.db.DataSourceFactory;
@@ -13,7 +13,8 @@ import io.dropwizard.setup.Environment;
  */
 public class WebApplication extends Application<WebAppConfiguration> {
 
-    private final HibernateBundle<WebAppConfiguration> hibernate = new HibernateBundle<WebAppConfiguration>(Job.class) {
+    private final HibernateBundle<WebAppConfiguration> hibernate =
+            new HibernateBundle<WebAppConfiguration>(Job.class, Client.class, User.class, Payment.class, Bill.class) {
         @Override
         public DataSourceFactory getDataSourceFactory(WebAppConfiguration configuration) {
             return configuration.getDataSourceFactory();
